@@ -29,6 +29,7 @@ module.exports = function(passport){
             if(!isValidPassword(users[username], password)){
                 return done('Invalid password', false);
             }
+
             //successfully login
             return done(null, users[username]);
         }
@@ -48,7 +49,7 @@ module.exports = function(passport){
                 username: username,
                 password: createHash(password)
             };
-
+            
             return done(null, users[username]);
 
         })
