@@ -1,9 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.route('post')
+    //return all posts
+    .get(function(req, res){
+        //temporary solution
+        res.send({message: 'TODO return all posts'});
+    })
+    //post some data
+    .post(function(req, res){
+        //temporary solution
+        res.send({message: 'TODO Create a new post'});
+    });
 
 module.exports = router;
